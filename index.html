@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <body>
+        <div class="container">
+            <h1>Shopping Cart</h1>
+    
+            <!-- Products List -->
+            <h2>Products</h2>
+            <div id="products">
+                <!-- Product items will be injected here by JavaScript -->
+            </div>
+    
+            <!-- Cart List -->
+            <h2>Your Cart</h2>
+            <div id="cart">
+                <!-- Cart items will be injected here by JavaScript -->
+            </div>
+    
+            <!-- Total Amount and Discount Code -->
+            <div class="cart-total">
+                Total: $<span id="totalAmount">0.00</span>
+            </div>
+            <input type="text" id="couponCode" placeholder="Enter coupon code">
+            <button onclick="applyDiscount()">Apply Discount</button>
+    
+            <!-- Message display -->
+            <p id="message" style="color: green;"></p>
+        </div>
+    
+        <script src="index.js"></script>
+    </body>
+    </html>

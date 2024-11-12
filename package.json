@@ -1,0 +1,14 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "This is a simple shopping cart web application built with HTML, CSS, and JavaScript. The application allows users to view a list of products, add them to their shopping cart, manage quantities, apply a discount coupon, and see the total price. The shopping cart data persists across page refreshes using `localStorage`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

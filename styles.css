@@ -57,6 +57,21 @@ h2 {
 }
 
 /* Button Styles */
+/* Style for the cart item container */
+.cart-item {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+justify-content: space-around;}
+
 button {
     padding: 8px 12px;
     border: none;
@@ -66,6 +81,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    /* margin-left:1px; */
 }
 
 button:hover {
@@ -80,6 +96,9 @@ button:disabled {
 /* Styles for Remove and Decrease Buttons */
 button.remove, button.decrease {
     background-color: #dc3545; /* Red background */
+    display: flex;
+    align-content: end;
+    margin: 5px;
 }
 
 button.remove:hover, button.decrease:hover {
@@ -112,6 +131,23 @@ button.remove:hover, button.decrease:hover {
     color: #28a745;
     margin-top: 10px;
 }
+/* Style the decrease and remove buttons */
+button.decrease,
+button.remove {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+    /* padding: 5px 10px; */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Optionally add hover effect */
+button.decrease:hover,
+button.remove:hover {
+    background-color: #ffcccc;
+}
+
 
 /* Responsive Design */
 @media (max-width: 600px) {

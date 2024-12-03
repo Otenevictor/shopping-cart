@@ -87,12 +87,11 @@ function calculateTotal() {
     document.getElementById("totalAmount").textContent = total.toFixed(2);
 }
 
-// apply discount
 function applyDiscount() {
-    const couponCodeInput = document.getElementById("couponCode").value;
-    const couponCodePattern = /^WEB3BRIDGECOHORT\d+$/;  // Regex to match 'WEB3BRIDGECOHORT' followed by any digit(s)
+    const couponCode = document.getElementById("couponCode").value.trim();
+    const couponCodePattern = /^WEB3BRIDGECOHORT\d+$/; // Matches 'WEB3BRIDGECOHORT' followed by one or more digits
 
-    if (couponCodePattern.test(couponCodeInput)) {
+    if (couponCodePattern.test(couponCode)) {
         let total = parseFloat(document.getElementById("totalAmount").textContent);
         total *= 0.9; // Apply a 10% discount
         document.getElementById("totalAmount").textContent = total.toFixed(2);
@@ -104,6 +103,7 @@ function applyDiscount() {
     }
 }
 
+
 // Function to apply discount
 function applyDiscount() {
     const couponCode = document.getElementById("couponCode").value;
@@ -114,7 +114,7 @@ function applyDiscount() {
         document.getElementById("message").textContent = "Discount applied!";
         document.getElementById("message").style.color = "green";
     } else {
-        document.getElementById("message").textContent = "Invalid coupon code WEB3BRIDGECOHORTx.";
+        document.getElementById("message").textContent = "Invalid coupon code .";
         document.getElementById("message").style.color = "red";
     }
 }

@@ -47,9 +47,11 @@ function displayCart() {
         cartContainer.innerHTML += `
             <div class="cart-item">
                 <span>${item.name} - $${item.price} x ${item.quantity}</span>
-                <button onclick="changeQuantity(${item.id}, -1)">-</button>
+                <div class="info">
+                <button class="decrease" onclick="changeQuantity(${item.id}, -1)">-</button>
                 <button onclick="changeQuantity(${item.id}, 1)">+</button>
-                <button onclick="removeFromCart(${item.id})">Remove</button>
+                <button class="remove" onclick="removeFromCart(${item.id})">Remove</button>
+                </div>
             </div>
         `;
     });
@@ -102,6 +104,20 @@ function applyDiscount() {
     }
 }
 
+// Function to apply discount
+function applyDiscount() {
+    const couponCode = document.getElementById("couponCode").value;
+    if (couponCode === "WEB3BRIDGECOHORTx") {
+        let total = parseFloat(document.getElementById("totalAmount").textContent);
+        total *= 0.9; // 10% discount
+        document.getElementById("totalAmount").textContent = total.toFixed(2);
+        document.getElementById("message").textContent = "Discount applied!";
+        document.getElementById("message").style.color = "green";
+    } else {
+        document.getElementById("message").textContent = "Invalid coupon code WEB3BRIDGECOHORTx.";
+        document.getElementById("message").style.color = "red";
+    }
+}
 // Initialize the app
 displayProducts();
 displayCart();
